@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function setns() {
-    $1="$(cat dev | egrep -i '^enp[0-9]s[0-9]?[0-9]?u' | cut -d ' ' --fields=2)"
+    $1="$(cat /proc/net/dev | egrep -i '^enp[0-9]s[0-9]?[0-9]?u' | cut -d ' ' --fields=2)"
 }
 
 ydl_pid="$(cat /home/mark/tmp/ydl-pid)"
